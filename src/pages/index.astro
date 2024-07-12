@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Cards from '../components/Cards.astro';
+import '@fontsource/poppins';
+import img1 from '../images/icon-supervisor.svg';
+import img2 from '../images/icon-karma.svg';
+import img3 from '../images/icon-calculator.svg';
+import img4 from '../images/icon-team-builder.svg';
+---
+
+<Layout title='FMentor'>
+	<main class="mx-auto max-w-sm lg:max-w-6xl font-poppins py-10">
+		<Card />
+
+		<section class="pt-20 grid gap-8 lg:grid-cols-3 lg:grid-rows-4 lg:grid-flow-col">
+			<!--Card 1 -->
+			<div class="flex lg:row-start-2 lg:row-span-2">
+				<Cards 
+				title='Supervisor'
+				text='Monitors activity to indentity project roadblocks'
+				img={img1.src}
+				bordercolor='border-t-pcyan'
+				/>
+			</div>
+
+			<!--Card 2 -->
+			<div class="flex lg:row-start-1 lg:col-start-2 lg:row-span-2">
+				<Cards 
+				title='Team Builder'
+				text='Scans our talent network to create the optimal team for your project'
+				img={img4.src}
+				bordercolor='border-t-pred'
+				/>
+			</div>
+
+			<!--Card 3 -->
+			<div class="lg:row-span-2 lg:col-start-2 lg:row-start-3 flex">
+				<Cards 
+				title='Karma'
+				text='Regulary our talent network to ensure quality'
+				img={img2.src}
+				bordercolor='border-t-porange'
+				/>
+			</div>
+
+			<!--Card 4 -->
+			<div class="flex lg:row-start-2 lg:row-span-2 lg:col-start-3">
+				<Cards 
+				title='Calculator'
+				text='Uses data from past projects to previde better delivery estimates'
+				img={img3.src}
+				bordercolor='border-t-pblue'
+				/>
+			</div>
+
+		</section>
+	</main>
+</Layout>

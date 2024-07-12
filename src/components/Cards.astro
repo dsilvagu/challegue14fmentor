@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string;
+    text: string;
+    img: string;
+    bordercolor: string;
+}
+
+const {title, text, img, bordercolor} = Astro.props;
+---
+
+<div class="bg-[#FFFF] shadow-lg text-pvdblue p-10 flex flex-col relative  border-t-4 rounded-lg" class:list={bordercolor}>
+    <h1 class="text-lg font-extrabold">{title}</h1>
+    <p class="text-pgblue text-sm">{text}</p>
+    <div class=" flex justify-end">
+        <img class="w-max pt-10" src={img} alt="">
+    </div>
+</div>
